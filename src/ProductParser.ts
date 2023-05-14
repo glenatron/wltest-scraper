@@ -8,7 +8,7 @@ export class ProductParser {
     protected products: Array<IProductOption>;
 
     constructor() {
-        // a nasty monkeypatch to prevent JSDOM falling throwing errors while trying to parse CSS.
+        // a nasty monkeypatch to prevent JSDOM throwing errors while trying to parse CSS.
         implementation.prototype._updateAStyleBlock = () => { };
         this.resetProducts();
     }
